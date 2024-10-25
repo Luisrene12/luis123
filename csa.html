@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes</title>
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="kalo.css">
+</head>
+<body>
+
+<div class="carrusel">
+    <div class="carrusel-imagenes" id="carrusel">
+        <div class="carrusel-imagen">
+            <img src="imagen1/churrasco-0522.jpg" alt="Imagen 1">
+        </div>
+        <div class="carrusel-imagen">
+            <img src="imagen1/churrasco-0522.jpg" alt="Imagen 2">
+        </div>
+        <div class="carrusel-imagen">
+            <img src="imagen1/R.jpg" alt="Imagen 3">
+        </div>
+    </div>
+    <div class="botones">
+        <button class="boton" onclick="anterior()">❮</button>
+        <button class="boton" onclick="siguiente()">❯</button>
+    </div>
+</div>
+
+<<script>
+    let indice = 0;
+
+    function siguiente() {
+        const carrusel = document.getElementById('carrusel');
+        const totalImagenes = document.querySelectorAll('.carrusel-imagen').length;
+        indice = (indice + 1) % totalImagenes;
+        actualizarCarrusel(carrusel);
+    }
+
+    function anterior() {
+        const carrusel = document.getElementById('carrusel');
+        const totalImagenes = document.querySelectorAll('.carrusel-imagen').length;
+        indice = (indice - 1 + totalImagenes) % totalImagenes;
+        actualizarCarrusel(carrusel);
+    }
+
+    function actualizarCarrusel(carrusel) {
+        const desplazamiento = -indice * 100;
+        carrusel.style.transform = `translateX(${desplazamiento}%)`;
+    }
+
+    // Movimiento automático
+    setInterval(siguiente, 3000); // Cambia de imagen cada 3 segundos
+</script>
+<div class="Servicios">
+    <div class="tarjetas">
+        <figure>
+            <img src="imagen/keperi-al-horno-plato-beniano-bolivia.jpg">
+        </figure>
+        <div class="contenido">
+            <h3>Keperi al Horno</h3>
+            <p>Descubre el sabor intenso de nuestra Keperi al Horno, una delicia gourmet que combina la ternura de la carne con especias seleccionadas. Nuestro secreto? Un toque de amor en cada porción. ¡Prueba la perfección en cada bocado!</p>
+            <a href="detalles.html">Mas Detalles</a>
+        </div>
+    </div>
+    <div class="tarjetas">
+        <figure>
+            <img src="imagen/istock_000050294856_large.jpg">
+        </figure>
+        <div class="contenido">
+            <h3>Chancho al Horno</h3>
+            <p>Sabor a tradición en cada mordida. Nuestro Chancho al Horno es una obra maestra de la cocina, con una carne suave y jugosa, acompañada de una crujiente capa exterior. ¡Un clásico que nunca pasa de moda!</p>
+            <a href="detalles.html">Mas Detalles</a>
+        </div>
+    </div>
+    <div class="tarjetas">
+        <figure>
+            <img src="imagen/parrilla-variedad-carnes-ella_188544-8372.avif">
+        </figure>
+        <div class="contenido">
+            <h3>Churrasco</h3>
+            <p>¡La esencia de la carne argentina! Nuestro Churrasco es una experiencia gastronómica que te llevará a la parrilla. Cortes selectos, cocinados a la perfección, con un sabor ahumado que te dejará sin aliento. ¡No te pierdas este placer culinario!</p>
+            <a href="detalles.html">Mas Detalles</a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

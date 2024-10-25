@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTOWEB1!</title>
+    <link rel="stylesheet" href="Lindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://wa.me/qr/QFWP7B4HDTAHL1" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+                </a>
+                <header>
+                    <div class="container">
+                        <p class="logo"><a href="index.html">El Arte del Asado</a></p>
+                        <nav>
+                            <!-- Aquí implemento el menú desplegable en Quienes Somos -->
+                            <ul class="menu-principal">
+                                <li class="menu-desplegable">
+                                    <a href="#"><i class="fas fa-users"></i> productos</a>
+                                    
+                                </li>
+                                <li class="menu-desplegable">
+                                    <a href=""><i class="fas fa-cogs"></i> corte de carne</a>
+                                        <ul class="submenu">
+                                            <li><a href="servicios.html">Servicios</a></li>
+                                        </ul>
+                                    </li>
+                                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contáctanos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+
+    <section id="hero">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="imagen1/churrasco-0522.jpg" alt="Descripción de imagen 1">
+                <img src="imagen1/b5554c69-0351-4dcf-85f5-2689369e3a26.jpg" alt="Descripción de imagen 2">
+                <img src="imagen1/fe74cb61-190b-40b3-ba04-0d8a7bdfdd21.jpg" alt="Descripción de imagen 3">
+                
+        </div>
+        <h1>churrasqueria s</h1> 
+        <button><a href="servicios.html">Nuestros Servicios</a></button>
+    </section>   
+</section>   
+
+    
+<center><h2>Nuestros Servicios</h2></center>
+<div class="Servicios">
+    <div class="tarjetas">
+        <figure>
+            <img src="imagen1/dd969092-1569-43a2-becf-ffc1007ef83e.jpg">
+        </figure>
+        <div class="contenido">
+            <h3>huachalomo</h3>
+            <ul>
+                <li>Picanha</li>
+                <li>Asado de tira</li>
+                <li>Vacio</li>
+                <li>Chorizo</li>
+                <li>Entranha</li>
+                <li>Costilla</li>
+                <li>Lomo</li>
+            </ul>
+            
+            <a href="detalles.html">Mas Detalles</a>
+        </div>
+    </div>
+    <div class="tarjetas">
+        <figure>
+            <img src="imagen1/f377f69a-d08a-47bd-b24a-c00ea756cc0c.jpg">
+        </figure>
+        <div class="contenido">
+            <h3>lomo vetado</h3>
+            <ul>
+                <li>ojo de bife</li>
+                <li>chuleton</li>
+                <li>ribeye</li>
+                
+            </ul>
+            
+            <a href="detalles.html">Mas Detalles</a>
+        </div>
+    </div>
+    <div class="tarjetas">
+        <figure>
+            <img src="imagen1/88a44698-5c96-4adb-860f-6bd3f11b891c.jpg"
+        <div class="contenido">
+            <h3>punta de ganso</h3>
+            <ul>
+                <li>picanha</li>
+                <li>churrasco de tira</li>
+                <li>bife de tira</li>
+                <li>punta mariposa</li>
+                <li>medallon de punta</li>
+                <li>punta entera</li>
+                
+            </ul>
+            <a href="detalles.html">Mas Detalles</a>
+        </div>
+    </div>
+</div>
+
+</section>
+    <section id="final">
+        <h2>CONTACTO DIRECTO</h2>
+        <button>
+            <form action="enviar_formulario.php" method="post">
+                <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                
+                <label for="email"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ejemplo@correo.com" required>
+                
+                <label for="mensaje"><i class="fas fa-comments"></i> Mensaje:</label>
+                <input type="mensaje" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required>
+
+                
+                <input type="submit" value="Enviar">
+            </form>
+
+        </button>
+    </section>
+
+    <footer>
+        <div class="container4">
+            <p>&copy; El arte del Asado</p>
+        </div>
+    </footer>
+
+    <footer id="pie">
+        <p>Todos los Derechos Reservados &copy; 2024</p>
+        <ul>
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
+            <li><a href="mailto:contacto@sitesync.com"><i class="fas fa-envelope"></i> contacto@sitesync.com</a></li>
+        </ul>
+        <div id="redes-sociales">
+            <a href="https://facebook.com/sitesync" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+            <a href="https://twitter.com/sitesync" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+        const totalSlides = slides.length;
+        
+        // Función para mostrar la imagen actual
+        function showSlide(index) {
+            const offset = -index * 100; // Calcula el desplazamiento
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+        
+        // Cambia la imagen automáticamente cada 5 segundos
+        function startCarousel() {
+            setInterval(() => {
+                currentIndex++;
+                if (currentIndex >= totalSlides) {
+                    currentIndex = 0; // Vuelve al principio si está al final
+                }
+                showSlide(currentIndex);
+            }, 5000);
+        }
+        
+        // Muestra la primera imagen al cargar
+        showSlide(currentIndex);
+        startCarousel();
+        </script>
+        
+</body>
+</html>
